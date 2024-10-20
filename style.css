@@ -1,0 +1,107 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('background.gif');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    color: #ff4081;
+    font-size: 2.5em;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+.emoji-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.emoji {
+    font-size: 50px;
+    margin: 0 15px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.emoji:hover {
+    transform: scale(1.2);
+}
+
+.message-container, .question-container {
+    margin-top: 20px;
+    width: 100%;
+    display: none; /* Ẩn phần lời chúc và câu hỏi cho đến khi cần */
+}
+
+.message, .question {
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.answer {
+    display: block;
+    margin: 10px 0;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.correct {
+    background-color: #d4edda;
+}
+
+.incorrect {
+    background-color: #f8d7da;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081;
+    }
+    to {
+        text-shadow: 0 0 20px #ff4081, 0 0 30px #ff4081;
+    }
+}
+
+.playMusicButton {
+    background-color: #ff4081; /* Màu nền */
+    color: white; /* Màu chữ */
+    border: none; /* Không có đường viền */
+    border-radius: 25px; /* Bo tròn góc */
+    padding: 10px 20px; /* Khoảng cách bên trong */
+    font-size: 1.2em; /* Kích thước chữ */
+    cursor: pointer; /* Thay đổi con trỏ khi hover */
+    transition: background-color 0.3s, transform 0.2s; /* Hiệu ứng chuyển đổi */
+    margin-top: 20px; /* Khoảng cách phía trên */
+}
+
+.playMusicButton:hover {
+    background-color: #e91e63; /* Màu nền khi hover */
+    transform: scale(1.05); /* Phóng to một chút khi hover */
+}
+
+canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

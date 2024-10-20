@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lời Chúc Ngày Phụ Nữ Việt Nam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="pinkboard"></canvas>
+    <div class="container">
+        <h1>Chúc Mừng Ngày Phụ Nữ Việt Nam</h1>
+
+        <!-- Các biểu tượng cảm xúc cho mini game -->
+        <div class="emoji-container">
+            <div class="emoji" onclick="selectEmoji('happy')">😊</div>
+            <div class="emoji" onclick="selectEmoji('love')">❤️</div>
+            <div class="emoji" onclick="selectEmoji('celebrate')">🎉</div>
+        </div>
+
+        <!-- Nút Phát Nhạc -->
+        <button class="playMusicButton" onclick="playMusic()">Phát Nhạc</button>
+
+        <!-- Danh sách lời chúc -->
+        <div class="message-container" id="messageContainer"></div>
+
+        <!-- Danh sách câu hỏi -->
+        <div class="question-container" id="questionContainer"></div>
+
+        <!-- Nhạc sẽ tự phát khi vào trang -->
+        <audio id="backgroundMusic" loop>
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
